@@ -5,3 +5,11 @@ npm i mongoose
 created -> index.js -- which will be our entry point of backend server
 
 push backend and frontend separatlly on github
+
+npm i -D nodemon
+
+npm i -g nodemon   //installing nodemon globally
+
+if still having nodemon error then go to 
+windows > powershell > run as administrator > type-->> Set-ExecutionPolicy Unrestricted > y 
+
