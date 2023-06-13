@@ -11,8 +11,28 @@ npm i -D nodemon
 
 npm i -g nodemon   //installing nodemon globally
 
+======================================================
 if still having nodemon error then go to 
 windows > powershell > run as administrator > type-->> Set-ExecutionPolicy Unrestricted > y 
+======================================================
 
 npm install express-validator
+
+=======================================================
+go to thunder > collection > new collection > "iNotebook" > new folder > "Authentication" > new request > "create a new User"
+
+POST localhost:5000/api/auth/createuser
+
+in body > {
+  "name" : "Can Yaman",
+  "email" : "earlyBird@turkishWebSerise.com",
+  "password" : "myCurrentFvrt1"
+}
+
+in header > Content-Type > application/json
+
+- This collection stays here after closing tab or vs-code
+- We can export this collection as a json file and import on any system. 
+
+=======================================================
 
