@@ -1,3 +1,4 @@
+nodemon .\index.js  ===>> to start our api
 npm init
 npm i express
 npm i mongoose
