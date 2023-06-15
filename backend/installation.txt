@@ -41,6 +41,11 @@ in header > Content-Type > application/json
 - "pepper" also adds security into hash password, but we keep it into backend only.
 
 npm i bcryptjs
+
 =======================================================
 
 npm install jsonwebtoken   ----> a way to verify a user  ----> jwt.io (info about this)
+
+=======================================================
+
+middleware --> is a function, which is going to call when there will come any request
