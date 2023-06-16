@@ -2,6 +2,12 @@ const { Schema } = require('mongoose');
 const mongoose = require('mongoose');
 
 const NotesSchema = new Schema({
+
+    // only user can access his own data
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'user'  
+    },
     title:{
         type: String,
         require: true

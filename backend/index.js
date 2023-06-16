@@ -11,6 +11,7 @@ app.use(express.json()) // to use request.body we need to uses this
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
+
 // Available routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
