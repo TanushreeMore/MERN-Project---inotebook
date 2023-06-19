@@ -1,0 +1,20 @@
+npm i react-router-dom concurrently
+
+===============================================
+
+in outer package.json > script > write -->> "both": "concurrently \"npm run start\" \"nomdmon backend/index.js\""
+
+===============================================
+
+start --->> npm start & nodemon backend\index.js on two different terminals
+
+using above "both" script
+we can write "npm run both" in outer path and start both servers simultaniously.  
+===============================================
+
+
+
+
+
+
+
