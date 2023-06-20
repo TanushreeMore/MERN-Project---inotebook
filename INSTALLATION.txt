@@ -12,7 +12,19 @@ using above "both" script
 we can write "npm run both" in outer path and start both servers simultaniously.  
 ===============================================
 
+Context API --->>
+- we can create context separatly 
+- and we directly use it with help of useContext hook. 
+- don't need to pass props through all components.
 
+===============================================
+
+React App --->>
+{most important things in react}
+1. state
+2. components
+
+===============================================
 
 
 
