@@ -2,7 +2,7 @@ npm i react-router-dom concurrently
 
 ===============================================
 
-in outer package.json > script > write -->> "both": "concurrently \"npm run start\" \"nomdmon backend/index.js\""
+in outer package.json > script > write -->> "both": "concurrently \"npm run start\" \"nodemon backend/index.js\""
 
 ===============================================
 
