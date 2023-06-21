@@ -26,6 +26,14 @@ React App --->>
 
 ===============================================
 
+useLocation hook -->>
+- it's a part of react-router
+
+while working on Navebar.. to make using directory active.. I used js and useLocation as follows --->>
+className="nav-link active"  <<===>> className={`nav-link ${location.pathname === "/about" ? "active" : "" }`}
+
+===============================================
+
 
 
 
