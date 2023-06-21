@@ -38,6 +38,17 @@ npm i bootstrap-icons
 
 ===============================================
 
+if there's CORS error occure during connection
+goto terminal
 
+cd .\backend\
+npm install cors
+
+then go to index.js of backend
+and paste -->>  var cors = require('cors')
+                
+                app.use(cors())
+
+===============================================
 
 
