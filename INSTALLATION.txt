@@ -34,6 +34,9 @@ className="nav-link active"  <<===>> className={`nav-link ${location.pathname ==
 
 ===============================================
 
+npm i bootstrap-icons
+
+===============================================
 
 
 
