@@ -5,7 +5,7 @@ import AddNote from "./AddNote";
 
 const Notes = () => {
   const context = useContext(NoteContext);
-  const { notes, getNotes } = context;
+  const { notes, getNotes, editNote } = context;
 
   useEffect(() => {
     getNotes();
@@ -13,11 +13,14 @@ const Notes = () => {
   }, []);
 
   const ref = useRef(null);
-  const [note, setNote] = useState({ etitle: "", edescription: "", etag: "" });
+  const refClose = useRef(null);
+  const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" });
 
   const updateNote = (currentNote) => {
+    // 👇️ open modal on click of element
     ref.current.click();
     setNote({
+      id: currentNote._id,
       etitle: currentNote.title,
       edescription: currentNote.description,
       etag: currentNote.tag,
@@ -25,7 +28,9 @@ const Notes = () => {
   };
 
   const handleClick = (e) => {
-    e.preventDefault();
+    editNote(note.id, note.etitle, note.edescription, note.etag)
+    // 👇️ Close modal on click of element
+    refClose.current.click();
     console.log("Updating the note...", note);
   };
   const onChange = (e) => {
@@ -64,7 +69,7 @@ const Notes = () => {
               <button
                 type="button"
                 className="close"
-                data-dismiss="modal"
+                data-bs-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
@@ -116,9 +121,10 @@ const Notes = () => {
             </div>
             <div className="modal-footer">
               <button
+                ref={refClose}
                 type="button"
                 className="btn btn-secondary"
-                data-dismiss="modal"
+                data-bs-dismiss="modal"
               >
                 Close
               </button>
