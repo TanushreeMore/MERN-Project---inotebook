@@ -4,7 +4,10 @@ const About = () => {
   
   return (
     <>
-      <h1>About</h1>
+      <div className="container">
+        <h1>iNotebook</h1>
+        <h6>iNotebook is a React Application for managing personal notes on the cloud</h6>
+      </div>
     </>
   );
 };
