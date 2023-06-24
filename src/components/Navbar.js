@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   let location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // console.log(location.pathname);
   }, [location]);
 
   const handleLogout = () => {
-
+      localStorage.removeItem('token');
+      navigate('/login');
   }
-  
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div className="container-fluid">
