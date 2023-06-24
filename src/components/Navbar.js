@@ -7,6 +7,11 @@ const Navbar = () => {
   useEffect(() => {
     // console.log(location.pathname);
   }, [location]);
+
+  const handleLogout = () => {
+
+  }
+  
   return (
     <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div className="container-fluid">
@@ -37,10 +42,12 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          { !localStorage.getItem('token') ?
+            <form className="d-flex" role="search">
           <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
           <Link className="btn btn-primary mx-1" to="/signup" role="button">Sign Up</Link>
-          </form>
+          </form>: <button onClick={handleLogout} className="btn btn-primary">Logout</button>
+          }
         </div>
       </div>
     </nav>
